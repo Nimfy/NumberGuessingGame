@@ -1,0 +1,109 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(to right bottom, #D1E8E2 0%, #116466 40%, #2C3531 70%);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+
+}
+ 
+button, input {
+  display: block;
+  margin: 0 auto;
+  padding: 1vw 3vh;
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+  font-weight: bold;
+  background: linear-gradient(to right bottom, #D9B08C 0%, #FCCB9A 50%, lightyellow 99%);
+}
+button {
+  border-radius: 10px;
+}
+input {
+  background: white;
+  color: black;
+  max-width: 50vw;
+}
+input[disabled], #game__area__button[disabled] {
+  background: gray;
+  color: lightgray;
+}
+input[disabled] {
+  color: gray;
+}
+
+h1 {
+  background: linear-gradient(#116466, black);
+  text-align: center;
+  padding: 2vh 0;
+  font-size: calc(14px + 3vw);
+}
+#header-icon {
+  display: inline-block;
+  margin: 0 3vw;
+  padding: 0 1.5vw;
+  border: 2px white solid;
+  border-radius: 50%;
+  animation: iconrotate 3s linear infinite;
+}
+
+@keyframes iconrotate {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(359deg);}
+}
+
+.instruction {
+  margin-bottom: 5vh;
+  padding: 0 10vw;
+}
+
+.game__area__startButton__animation {
+  animation: scalestart 3s linear infinite;
+}
+
+@keyframes scalestart {
+0% {transform: scale(1);}
+50% {transform: scale(1.2);}
+100% {transform: scale(1);}
+}
+
+.game__area div {
+  padding: 10px;
+}
+
+.game__area div, button {
+  margin: 0 10vh;
+}
+
+.game__area__div {
+  height: 10vh;
+}
+
+.div__guesses {
+   display: block;
+   margin: 10px 0;
+ }
+
+.game__area__results__win {
+  background: linear-gradient(red, #2C3531);
+border-radius: 5px;
+  font-weight:bold;
+  padding: 10px;
+  transition: 1s linear;
+}
